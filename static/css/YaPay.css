@@ -1,0 +1,36 @@
+#popupBoxOnePosition{
+    top: 0; left: 0; position: fixed; width: 100%; height: 120%;
+    background-color: rgba(0,0,0,0.7); display: none;
+}
+.popupBoxWrapper{
+    width: 750px; margin: 50px auto;
+}
+.popupBoxContent{
+    background-color: #FFF; padding: 15px;
+}
+.exit {
+    text-align: right;
+    font-size: 20px;
+}
+.payWithYape{
+    text-align: center;
+}
+.first {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.second {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+    height: auto;
+    width: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
