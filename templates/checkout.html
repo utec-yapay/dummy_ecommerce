@@ -128,7 +128,7 @@
 									</div>
 								</div>
 							</div>
-							<p><a href="javascript:void(0)" class="btn btn-primary py-3 px-4" onclick="toggle_visibility('popupBoxOnePosition');">Place an order</a></p>
+							<p><a href="javascript:void(0)" class="btn btn-primary py-3 px-4" onclick="toggle_visibility('#popupBoxOnePosition');">Place an order</a></p>
 						</div>
 					</div>
 				</div>
@@ -138,11 +138,11 @@
 				<div class="popupBoxWrapper">
 					<div class="popupBoxContent">
 											<div class="exit">
-													<button onclick="toggle_visibility('popupBoxOnePosition');">&times;</button>
+													<button onclick="toggle_visibility('#popupBoxOnePosition');">&times;</button>
 											</div>
 											<div class="payWithYape">Pay With Yape</div>
 											<div style="display:inline-block; vertical-align:top;">
-													<img src="{{ url_for('static', filename='images/QR_code.png') }}" alt="img"/>
+													<img id=qr alt="img" height="200px" />
 											</div>
 											<div style="display:inline-block; padding: 30px">
 													<div>1. Entra a Yape desde tu smartphone</div>
