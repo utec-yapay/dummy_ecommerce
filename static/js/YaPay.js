@@ -2,14 +2,12 @@ $("#popupBoxOnePosition").hide();
 $("#qr").attr("src", "/static/images/loading.gif");
 
 function toggle_visibility(id) {
-    if($("#yape").prop("checked")){
-        if ($(id).is(":hidden")){
-            console.log("Showing QR");
-            setQr("#qr");
-        }
+    if ($(id).is(":hidden")){
+        console.log("Showing QR");
+        setQr("#qr");
+    }
 
-        $(id).fadeToggle("fast");
-    } 
+    $(id).fadeToggle("fast");
  }
 
 
@@ -34,4 +32,3 @@ function toggle_visibility(id) {
      .fail(function(error) { alert(JSON.stringify(error))});
 
 }
-

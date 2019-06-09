@@ -81,58 +81,41 @@
 
     <section class="ftco-section">
       <div class="container">
-				<div class="row mt-5 pt-3 d-flex">
-					<div class="col-md-6 d-flex">
-						<div class="cart-detail cart-total bg-light p-3 p-md-4">
-							<h3 class="billing-heading mb-4">Cart Total</h3>
-							<p class="d-flex">
-								<span>Subtotal</span>
-								<span>${{ total }}</span>
-							</p>
-							<p class="d-flex">
-								<span>Delivery</span>
-								<span>$0.00</span>
-							</p>
-							<p class="d-flex">
-								<span>Discount</span>
-								<span>$0.00</span>
-							</p>
-							<hr>
-							<p class="d-flex total-price">
-								<span>Total</span>
-								<span>${{ total }}</span>
-							</p>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="cart-detail bg-light p-3 p-md-4">
-							<h3 class="billing-heading mb-4">Payment Method</h3>
-							<div class="form-group">
-								<div class="col-md-12">
-									<div class="radio">
-											<label><input type="radio" name="optradio" class="mr-2" value="directBank"> Direct Bank Tranfer</label>
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-md-12">
-									<div class="radio">
-											<label><input type="radio" name="optradio" class="mr-2" value="PayPal" id="paypal"> PayPal</label>
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-md-12">
-									<div class="radio">
-											<label><input type="radio" name="optradio" class="mr-2" value="Yape" id="yape"> Yape</label>
-									</div>
-								</div>
-							</div>
-							<p><a href="javascript:void(0)" class="btn btn-primary py-3 px-4" onclick="toggle_visibility('#popupBoxOnePosition');">Place an order</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
+            <div class="row mt-5 pt-3 d-flex">
+                <div class="col-md-6 d-flex">
+                    <div class="cart-detail cart-total bg-light p-3 p-md-4">
+                        <h3 class="billing-heading mb-4">Cart Total</h3>
+                        <p class="d-flex">
+                            <span>Subtotal</span>
+                            <span>${{ total }}</span>
+                        </p>
+                        <p class="d-flex">
+                            <span>Delivery</span>
+                            <span>$0.00</span>
+                        </p>
+                        <p class="d-flex">
+                            <span>Discount</span>
+                            <span>$0.00</span>
+                        </p>
+                        <hr>
+                        <p class="d-flex total-price">
+                            <span>Total</span>
+                            <span>${{ total }}</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="cart-detail bg-light p-3 p-md-4">
+                        <h3 class="billing-heading mb-4">Payment Method</h3>
+                        <p><a href="#" class="btn btn-primary py-3 px-4">Credit/Debit Card</a></p>
+                        <p><a href="#" class="btn btn-primary py-3 px-4">Direct Bank Transfer</a></p>
+                        <p><a href="#" class="btn btn-primary py-3 px-4">PayPal</a></p>
+                        <p><a href="javascript:void(0)" class="btn btn-primary py-3" onclick="toggle_visibility('popupBoxOnePosition');">YaPay</a></p>
+                    </div>
+                </div>
+            </div>
+      </div>
+>>>>>>> Stashed changes
 
 			<div id="popupBoxOnePosition">
 				<div class="popupBoxWrapper">
