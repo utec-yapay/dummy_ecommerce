@@ -29,6 +29,6 @@ function toggle_visibility(id) {
      .success(function(response) {
          $("#qr").attr("src", response["qrData"]);
      })
-     .fail(function(error) { alert(JSON.stringify(error))});
+     .fail(function(error) { console.log("Error: " + error) });
 
 }
