@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/YaPay.css') }}">
+    <!-- Yapay CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/app.b9feac94.css') }}">
 
   </head>
@@ -112,7 +113,8 @@
                         <p><a href="#" class="btn btn-primary py-3 px-4">Credit/Debit Card</a></p>
                         <p><a href="#" class="btn btn-primary py-3 px-4">Direct Bank Transfer</a></p>
                         <p><a href="#" class="btn btn-primary py-3 px-4">PayPal</a></p>
-                        <p><yapay-widget></yapay-widget></p>
+                        <!-- Yapay widget -->
+                        <p><yapay-widget paymentjwt="{{ jwt }}"></yapay-widget></p>
                     </div>
                 </div>
             </div>
@@ -245,7 +247,8 @@
   <script src="{{ url_for('static', filename='js/google-map.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/YaPay.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/app.d527f7ec.js') }}"></script>
+  <!-- Yapay Js -->
+  <script src="{{ url_for('static', filename='js/app.b3f856c9.js') }}"></script>
 
   <script>
 		$(document).ready(function(){

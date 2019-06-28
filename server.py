@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import json
+import requests
 
 app = Flask(__name__)
 
@@ -45,14 +46,14 @@ cartlist = []
 def shop():
     if request.method == 'POST':
         cartlist.append((request.form).to_dict())
-        #print(cartlist)
+        print(cartlist)
     return render_template('shop.html')
 
 @app.route('/cart')
 def cart():
     total = 0
-    for dict in cartlist:
-        total = total + int(dict["Price"])
+    for item in cartlist:
+        total = total + int(item["Price"])
 
     print(json.dumps(cartlist))
 
@@ -61,9 +62,20 @@ def cart():
 @app.route('/checkout')
 def checkout():
     total = 0
-    for dict in cartlist:
-        total = total + int(dict["Price"])
-    return render_template('checkout.html', total=total)
+    for item in cartlist:
+        total = total + int(item["Price"])
+
+    url = "http://localhost:8080/payments"
+
+    payload = {
+        "amt": total,
+        "cpn": "Company S.A.C.",
+        "cpp": "933740123"
+    }
+
+    r = requests.post(url, json=payload)
+
+    return render_template('checkout.html', total=total, jwt=r.text)
 
 @app.route('/confirmation')
 def confirmation():
