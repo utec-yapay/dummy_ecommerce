@@ -46,7 +46,6 @@ cartlist = []
 def shop():
     if request.method == 'POST':
         cartlist.append((request.form).to_dict())
-        print(cartlist)
     return render_template('shop.html')
 
 @app.route('/cart')
@@ -54,8 +53,6 @@ def cart():
     total = 0
     for item in cartlist:
         total = total + int(item["Price"])
-
-    print(json.dumps(cartlist))
 
     return render_template('cart.html', total=total, cartlist=cartlist)
 
